@@ -1,0 +1,14 @@
+{
+  "name": "express-project",
+  "version": "1.0.0",
+  "description": "A simple express project",
+  "main": "src/index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "mr.ori.avraham@gmail.com (Ori Avraham)",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
