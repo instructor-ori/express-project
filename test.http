@@ -2,13 +2,24 @@
 GET http://localhost:3000/users
 
 ###
-GET http://localhost:3000/users/1
+GET http://localhost:3000/users/91c7fbd2-4098-4254-94b5-c1fcbe9e997e
 
 ###
 POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "Bob Smith",
+    "email": "bob.smith@email.com"
+}
 
 ###
-PATCH  http://localhost:3000/users/1
+PATCH  http://localhost:3000/users/64bbaa83-8944-441c-8aa4-52df8a819f07
+Content-Type: application/json
+
+{
+    "name": "Jonathan Doe"
+}
 
 ###
-DELETE  http://localhost:3000/users/1
+DELETE  http://localhost:3000/users/e746f876-2673-4f1f-b97e-c1e420d16056

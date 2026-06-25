@@ -1,32 +1,22 @@
 import express from "express";
+import helmet from "helmet";
+import cors from "cors";
+import compression from "compression";
+import { notFound } from "./middleware/not-found.js";
+import { onError } from "./middleware/on-error.js";
+import usersRouter from "./routes/users.js";
 
 const app = express();
 
-// GET /users (all users)
-app.get("/users", (req, res) => {
-  res.send("All users");
-});
+app.use(express.json());
+app.use(helmet());
+app.use(compression());
 
-// GET /users/:id (user by id)
-app.get("/users/:id", (req, res) => {
-  const id = req.params.id;
-  res.send(`User #${id}`);
-});
+app.use(cors({ origin: "*" }));
 
-// POST /users (create new user)
-app.post("/users", (req, res) => {
-  res.send("User created!");
-});
+app.use("/users", usersRouter);
 
-// PATCH /users/:id (update user by id)
-app.patch("/users/:id", (req, res) => {
-  const id = req.params.id;
-  res.send(`User #${id} updated!`);
-});
-
-app.delete("/users/:id", (req, res) => {
-  const id = req.params.id;
-  res.send(`User #${id} deleted!`);
-});
+app.use(notFound);
+app.use(onError);
 
 export default app;
