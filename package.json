@@ -5,7 +5,10 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "node --watch src/index.js"
+    "dev": "node --watch src/index.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
   },
   "keywords": [],
   "author": "mr.ori.avraham@gmail.com (Ori Avraham)",
@@ -14,7 +17,13 @@
   "dependencies": {
     "compression": "^1.8.1",
     "cors": "^2.8.6",
+    "drizzle-orm": "^1.0.0-rc.4",
     "express": "^5.2.1",
-    "helmet": "^8.2.0"
+    "helmet": "^8.2.0",
+    "pg": "^8.22.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.20.0",
+    "drizzle-kit": "^1.0.0-rc.4"
   }
 }
