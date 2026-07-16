@@ -1,9 +1,9 @@
 {
   "version": "8",
   "dialect": "postgres",
-  "id": "853eeedd-64c5-4b23-a48b-388022f0bfcb",
+  "id": "3c721461-a9ab-4ecd-bea4-66aa51131fac",
   "prevIds": [
-    "4e668e4c-0beb-41fe-a809-7abffee85fdf"
+    "a371e79f-36a7-4589-9063-9d2230f7a2fd"
   ],
   "ddl": [
     {
@@ -33,7 +33,7 @@
       "default": null,
       "generated": null,
       "identity": null,
-      "name": "name",
+      "name": "title",
       "entityType": "columns",
       "schema": "public",
       "table": "task"
@@ -41,7 +41,7 @@
     {
       "type": "text",
       "typeSchema": null,
-      "notNull": true,
+      "notNull": false,
       "dimensions": 0,
       "default": null,
       "generated": null,
@@ -103,7 +103,7 @@
     {
       "nameExplicit": false,
       "columns": [
-        "name"
+        "title"
       ],
       "nullsNotDistinct": false,
       "name": "task_name_key",
@@ -112,5 +112,7 @@
       "entityType": "uniques"
     }
   ],
-  "renames": []
+  "renames": [
+    "public.task.name->public.task.title"
+  ]
 }

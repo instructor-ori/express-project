@@ -1,7 +1,7 @@
 {
   "version": "8",
   "dialect": "postgres",
-  "id": "4e668e4c-0beb-41fe-a809-7abffee85fdf",
+  "id": "8cf0a017-c5f4-4b32-b6d9-a43230a230ae",
   "prevIds": [
     "00000000-0000-0000-0000-000000000000"
   ],
@@ -41,12 +41,25 @@
     {
       "type": "text",
       "typeSchema": null,
-      "notNull": false,
+      "notNull": true,
       "dimensions": 0,
       "default": null,
       "generated": null,
       "identity": null,
       "name": "description",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "task"
+    },
+    {
+      "type": "boolean",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "false",
+      "generated": null,
+      "identity": null,
+      "name": "completed",
       "entityType": "columns",
       "schema": "public",
       "table": "task"
