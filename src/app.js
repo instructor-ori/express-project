@@ -1,7 +1,7 @@
+import compression from "compression";
+import cors from "cors";
 import express from "express";
 import helmet from "helmet";
-import cors from "cors";
-import compression from "compression";
 import { notFound } from "./middleware/not-found.js";
 import { onError } from "./middleware/on-error.js";
 import usersRouter from "./routes/users.js";
